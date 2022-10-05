@@ -5,9 +5,9 @@ Logging trace requests example using nlog
 
 ![image](https://user-images.githubusercontent.com/562371/194052239-bd1eb109-366a-4ff1-bccf-9762cf27527d.png)
 
-Nethereum uses Trace to log requests and responses. 
+Nethereum uses **"Trace"** to log requests and responses, so the configuration needs to be configured as such. 
 
-Moore info on setup https://github.com/NLog/NLog/wiki/Getting-started-with-.NET-Core-2---Console-application#a-minimal-example
+More info on setup Nlog can be found here: https://github.com/NLog/NLog/wiki/Getting-started-with-.NET-Core-2---Console-application#a-minimal-example
 
 Example configuration file:
 
