@@ -9,7 +9,7 @@ Nethereum uses **"Trace"** to log requests and responses, so the configuration n
 
 More info on setup Nlog can be found here: https://github.com/NLog/NLog/wiki/Getting-started-with-.NET-Core-2---Console-application#a-minimal-example
 
-Example configuration file:
+**Example configuration file:**
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -34,6 +34,14 @@ Example configuration file:
 		<logger name="*" minlevel="Trace" writeTo="logfile,logconsole" />
 	</rules>
 </nlog>
+
+**Simple program**
+var logger = LoggerFactory.Create(builder => builder.AddNLog()).CreateLogger<Program>();
+logger.LogInformation("hello info!");
+logger.LogTrace("hello trace!");
+var web3 = new Web3("http://localhost:8545", logger);
+var blocknumber = await web3.Eth.Blocks.GetBlockNumber.SendRequestAsync();
+Console.ReadLine();
 
 
 ```
